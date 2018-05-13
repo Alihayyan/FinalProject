@@ -59,18 +59,13 @@ public class MainScreen {
 	private JPasswordField Password1;
 	private static ObjectMapper om = new ObjectMapper();
 
-	/**
-	 * Launch the application.
-	 * 
-	 * @throws FileNotFoundException
-	 */
+	
 	public static void main(String[] args) throws FileNotFoundException {
 
-		File FileAdmin = new File("Admins.txt");
 		File FileStudent = new File("Students.txt");
+		File FileAdmin = new File("Admins.txt");
 		File FileEmployee = new File("Employees.txt");
 
-		// Read the files -- I know it can be one interface method but this is easier :P
 		if (FileAdmin.exists()) {
 			if (new Scanner(FileAdmin).hasNextLine()) {
 				try {
@@ -131,16 +126,12 @@ public class MainScreen {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
+	
 	public MainScreen() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
+	
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 630, 461);
